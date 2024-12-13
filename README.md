@@ -1,5 +1,15 @@
 # Data Synthesis and augmentation using LLM
 
+# Content
+* [Taxonomy method ]
+  * [General model Distillation]
+  * [Domain model Distillation]
+  * [Model-self improvement]
+* [Data work stage]]
+  * [Data preparation]
+  * [Pretraining]
+  * [Fine-Tuning]
+  * [Instruction-Tuning]
 
 # Data work stage
 
