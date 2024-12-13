@@ -1,4 +1,4 @@
-# Data Synthesis and augmentation using LLM
+# Data Synthesis and Augmentation using LLM
 
 # Content
 * [Taxonomy method ]
