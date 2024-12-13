@@ -3,7 +3,7 @@
 
 # Data work stage
 
-## Data preparation
+## 1 Data preparation
 
 | Paper                                                                                                                                                                | Published in | Code/Project                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:--------------------------------------------------------------------------:|
@@ -47,7 +47,7 @@
 | [Llemma: An open language model for mathematics](https://arxiv.org/abs/2310.10631)                                                                                   | arxiv 2023   | https://github.com/EleutherAI/math-lm                                      |
 | [Code Less, Align More: Efficient LLM Fine-tuning for Code Generation with Data Pruning](https://arxiv.org/abs/2407.05040)                                           | arxiv 2024   | -                                                                          |
 
-## Data Pretraining
+## 2 Data Pretraining
 
 | Paper                                                                                                                                                                   | Published in | Code/Project                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:-------------------------------------------------------:|
@@ -64,7 +64,7 @@
 | [Enhancing multilingual language model with massive multilingual knowledge triples](https://arxiv.org/abs/2111.10962)                                                   | arxiv 2021   | https://github.com/ntunlp/kmlm.git                      |
 | [Large language models, physics-based modeling, experimental measurements: the trinity of data-scarce learning of polymer properties](https://arxiv.org/abs/2407.02770) | arxiv 2024   | -                                                       |
 
-## Data  Fine-Tuning
+## 3 Data  Fine-Tuning
 
 | Paper                                                                                                                                                                 | Published in | Code/Project                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:------------------------------------------------------------:|
