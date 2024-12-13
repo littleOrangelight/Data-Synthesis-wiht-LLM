@@ -1,63 +1,7 @@
-Data Synthesis using Large Language Models
+# Data Synthesis and augmentation using LLM
 
-Work In Progress.
 
-## Contents
-
-* [Taxonomy](#Taxonomy)
-  * [General Model Distillation](#General Model Distillation)
-  * [Domain Model Distillation](#Domain Model Distillation)
-* [Full Lifecycle of LLM](#Full-Lifecycle-of-LLM)
-  * [Data preparation](#Data-preparation)
-  * [Pretraining](#Pretraining)
-  * [Fine-Tuning](#Fine-tuning)
-  * [Instruction-Tuning](#Instruction-Tuning)
-  * [Preference Alignment](#Preference-Alignment)
-  * [Applications](#applications-1)
-* [Functionality](#Functionality)
-  * [Understanding](#Understanding)
-  * [Logic](#Logic)
-  * [Memory](#Memory)
-  * [Generation](#Generation)
-# Taxonomy
-
-## General Model Distillation
-
-| Paper                                                                                                                                                                                                                                                                | Published in | Code/Project                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:--------------------------------------------------------------------------:|
-| [Open-source large language models outperform crowd workers and approach ChatGPT in text-annotation tasks](https://arxiv.org/abs/2307.02179)                                                                                                                         | arxiv 2023   | -                                                                          |
-| [ChatGPT outperforms crowd workers for text-annotation tasks](https://www.pnas.org/doi/pdf/10.1073/pnas.2305016120)                                                                                                                                                  | PNAS 2023    | -                                                                          |
-| [Q: How to Specialize Large Vision-Language Models to Data-Scarce VQA Tasks? A: Self-Train on Unlabeled Images!](https://openaccess.thecvf.com/content/CVPR2023/papers/Khan_Q_How_To_Specialize_Large_Vision-Language_Models_to_Data-Scarce_VQA_CVPR_2023_paper.pdf) | CVPR 2023    | https://github.com/codezakh/SelTDA                                         |
-| [Mind's eye: Grounded language model reasoning through simulation](https://arxiv.org/pdf/2210.05359)                                                                                                                                                                 | arxiv 2022   | -                                                                          |
-| [Chatgpt-4 outperforms experts and crowd workers in annotating political twitter messages with zero-shot learning](https://arxiv.org/pdf/2304.06588)                                                                                                                 | arxiv 2023   | -                                                                          |
-| [Can chatgpt reproduce human-generated labels? a study of social computing tasks](https://arxiv.org/pdf/2304.10145)                                                                                                                                                  | arxiv 2023   | -                                                                          |
-| [CORE: A retrieve-then-edit framework for counterfactual data generation](https://arxiv.org/pdf/2210.04873)                                                                                                                                                          | EMNLP 2022   | https://github.com/tanay2001/CORE                                          |
-| [Diversify your vision datasets with automatic diffusion-based augmentation](https://arxiv.org/pdf/2210.04873)                                                                                                                                                       | NIPS 2023    | https://github.com/lisadunlap/ALIA                                         |
-| [Llamax: Scaling linguistic horizons of llm by enhancing translation capabilities beyond 100 languages](https://arxiv.org/pdf/2407.05975)                                                                                                                            | EMNLP 2024   | https://github.com/CONE-MT/LLaMAX/                                         |
-| [Gpt3mix: Leveraging large-scale language models for text augmentation](https://arxiv.org/pdf/2104.08826)                                                                                                                                                            | EMNLP 2021   | https://github.com/naver-ai/hypermix                                       |
-| [Closing the loop: Testing chatgpt to generate model explanations to improve human labelling of sponsored content on social media](https://arxiv.org/pdf/2306.05115)                                                                                                 | xAI 2023     | https://github.com/thalesbertaglia/chatgpt-explanations-sponsored-content/ |
-| [Data augmentation using llms: Data perspectives, learning paradigms and challenges](https://arxiv.org/pdf/2403.02990)                                                                                                                                               | arxiv 2024   | -                                                                          |
-| [Coannotating: Uncertainty-guided work allocation between human and large language models for data annotations](https://arxiv.org/pdf/2310.15638)                                                                                                                    | EMNLP 2023   | https://github.com/SALT-NLP/CoAnnotating                                   |
-
-## Domain Model Distillation
-
-| Paper                                                                                                                                        | Published in       | Code/Project                                 |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |:------------------:|:--------------------------------------------:|
-| [AlpaGasus: Training A Better Alpaca with Fewer Data](https://arxiv.org/abs/2307.08701)                                                      | arxiv 2023         | https://lichang-chen.github.io/AlpaGasus/    |
-| [TinyStories: How Small Can Language Models Be and Still Speak Coherent English?](https://arxiv.org/abs/2307.08701)                          | arxiv 2023         |                                              |
-| [Textbooks Are All You Need II: phi-1.5 technical report](https://arxiv.org/abs/2309.05463)                                                  | arxiv 2023         |                                              |
-| [Multimodal Self-Instruct: Synthetic Abstract Image and Visual Reasoning Instruction Using Language Model](https://arxiv.org/abs/2407.07053) | arxiv 2023         | https://multi-modal-self-instruct.github.io/ |
-| [Genixer: Empowering Multimodal Large Language Models as a Powerful Data Generator](https://arxiv.org/abs/2312.06731)                        | arxiv 2023         | https://github.com/zhaohengyuan1/Genixer     |
-| [Solving Quantitative Reasoning Problems with Language Models](https://arxiv.org/abs/2206.14858)                                             | arxiv 2022         |                                              |
-| [WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct](https://arxiv.org/abs/2308.09583)     | arxiv 2023         |                                              |
-| [WizardCoder: Empowering Code Large Language Models with Evol-Instruct](https://arxiv.org/abs/arXiv:2306.08568)                              | arxiv 2023         | https://github.com/nlpxucan/WizardLM.        |
-| [Magicoder: Empowering Code Generation with OSS-Instruct](https://arxiv.org/abs/2312.02120)                                                  | arxiv 2023         |                                              |
-| [VILA$^2$: VILA Augmented VILA](https://arxiv.org/abs/2407.17453)                                                                            | arxiv 2024         |                                              |
-| [Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling](https://arxiv.org/abs/2401.16380)                            | arxiv 2024         |                                              |
-| [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://aclanthology.org/2023.acl-long.754/)                      | ACL Anthology 2023 | https://github.com/yizhongw/self-instruct    |
-| [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465)                                                             | arxiv 2022         |                                              |
-
-# Full Lifecycle of LLM
+# Data work stage
 
 ## Data preparation
 
@@ -103,7 +47,7 @@ Work In Progress.
 | [Llemma: An open language model for mathematics](https://arxiv.org/abs/2310.10631)                                                                                   | arxiv 2023   | https://github.com/EleutherAI/math-lm                                      |
 | [Code Less, Align More: Efficient LLM Fine-tuning for Code Generation with Data Pruning](https://arxiv.org/abs/2407.05040)                                           | arxiv 2024   | -                                                                          |
 
-## Pretraining
+## Data Pretraining
 
 | Paper                                                                                                                                                                   | Published in | Code/Project                                            |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:-------------------------------------------------------:|
@@ -120,7 +64,7 @@ Work In Progress.
 | [Enhancing multilingual language model with massive multilingual knowledge triples](https://arxiv.org/abs/2111.10962)                                                   | arxiv 2021   | https://github.com/ntunlp/kmlm.git                      |
 | [Large language models, physics-based modeling, experimental measurements: the trinity of data-scarce learning of polymer properties](https://arxiv.org/abs/2407.02770) | arxiv 2024   | -                                                       |
 
-## Fine-Tuning
+## Data  Fine-Tuning
 
 | Paper                                                                                                                                                                 | Published in | Code/Project                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------:|:------------------------------------------------------------:|
@@ -166,147 +110,3 @@ Work In Progress.
 | [DISC-MedLLM: Bridging General Large Language Models and Real-World Medical Consultation](https://arxiv.org/abs/2308.14346)                                           | arxiv 2023   | https://github.com/FudanDISC/DISC-MedLLM                     |
 | [Mathgenie: Generating synthetic data with question back-translation for enhancing mathematical reasoning of llms](https://arxiv.org/abs/2402.16352)                  | arxiv 2024   | -                                                            |
 | [BianQue: Balancing the Questioning and Suggestion Ability of Health LLMs with Multi-turn Health Conversations Polished by ChatGPT](https://arxiv.org/abs/2310.15896) | arxiv 2023   | https://github.com/scutcyr/BianQue                           |
-
-## Instruction-Tuning
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Preference Alignment
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Applications
-
-### Math
-
-| Paper                                                                                                                                                                | Published in          | Code/Project                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---------------------:|:---------------------------------------------:|
-| [Galactica: A Large Language Model for Science](http://arxiv.org/abs/2211.09085)                                                                                     | arxiv 2022            | -                                             |
-| [STaR: Bootstrapping Reasoning With Reasoning](https://proceedings.neurips.cc/paper_files/paper/2022/hash/639a9a172c044fbb64175b5fad42e9a5-Abstract-Conference.html) | NeurIPS 2022          | https://github.com/ezelikman/STaR             |
-| [Multilingual Mathematical Autoformalization](https://arxiv.org/abs/2311.03755)                                                                                      | arxiv 2023            | -                                             |
-| [WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct](http://arxiv.org/abs/2308.09583)                              | arxiv 2023            | https://github.com/nlpxucan/WizardLM          |
-| [MAmmoTH: Building Math Generalist Models through Hybrid Instruction Tuning](https://arxiv.org/abs/2309.05653)                                                       | arxiv 2023            | -                                             |
-| [MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models](http://arxiv.org/abs/2309.12284)                                                     | arxiv 2023            | https://meta-math.github.io/                  |
-| [Synthetic Dialogue Dataset Generation using LLM Agents](https://arxiv.org/abs/2401.17461)                                                                           | EMNLP Workshop 2023   | -                                             |
-| [Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](https://openreview.net/forum?id=TPtXLihkny)                                                   | NeurIPS Workshop 2024 | -                                             |
-| [Synthetic Dialogue Dataset Generation using LLM Agents](http://arxiv.org/abs/2401.17461)                                                                            | arxiv 2024            | -                                             |
-| [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300)                                               | arxiv 2024            | https://github.com/deepseek-ai/DeepSeek-Math  |
-| [DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](https://arxiv.org/abs/2405.14333)                                            | arxiv 2024            | -                                             |
-| [Augmenting Math Word Problems via Iterative Question Composing](http://arxiv.org/abs/2401.09003)                                                                    | arxiv 2024            | https://huggingface.co/datasets/Vivacem/MMIQC |
-
-### Science
-
-| Paper                                                                                                                                                                                 | Published in                     | Code/Project                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------------------:|:------------------------------------------------------------:|
-| [Galactica: A Large Language Model for Science](http://arxiv.org/abs/2211.09085)                                                                                                      | arxiv 2022                       | -                                                            |
-| [Reflection-Tuning: Recycling Data for Better Instruction-Tuning](https://openreview.net/forum?id=xaqoZZqkPU)                                                                         | NeurIPS Workshop 2023 / ACL 2024 | https://github.com/tianyi-lab/Reflection_Tuning              |
-| [Reflexion: language agents with verbal reinforcement learning](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html) | NeurIPS 2023                     | https://github.com/noahshinn024/reflexion                    |
-| [SciLitLLM: How to Adapt LLMs for Scientific Literature Understanding](https://arxiv.org/abs/2408.15545)                                                                              | NeurIPS Workshop 2024            | https://github.com/dptech-corp/Uni-SMART/tree/main/SciLitLLM |
-| [SciInstruct: a Self-Reflective Instruction Annotated Dataset for Training Scientific Language Models](https://arxiv.org/abs/2401.07950)                                              | NeurIPS 2024                     | https://github.com/THUDM/SciGLM                              |
-| [ChemLLM: A Chemical Large Language Model](https://arxiv.org/abs/2402.06852)                                                                                                          | arxiv 2024                       | -                                                            |
-
-### Code
-
-| Paper                                                                                                                                                                                                               | Published in         | Code/Project                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--------------------:|:-------------------------------------:|
-| [CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://proceedings.neurips.cc/paper_files/paper/2022/hash/8636419dea1aa9fbd25fc4248e702da4-Abstract-Conference.html) | NIPS 2022            | https://github.com/salesforce/CodeRL  |
-| [Generating Programming Puzzles to Train Language Models](https://openreview.net/forum?id=H8cx0iO-y-9)                                                                                                              | ICLR 2022 (Workshop) | -                                     |
-| [Language Models Can Teach Themselves to Program Better](http://arxiv.org/abs/2207.14502)                                                                                                                           | ICLR 2023            | -                                     |
-| [Textbooks Are All You Need](https://arxiv.org/abs/2306.11644)                                                                                                                                                      | Arxiv 2023           | -                                     |
-| [Textbooks Are All You Need II: phi-1.5 technical report](https://arxiv.org/abs/2309.05463)                                                                                                                         | Arxiv 2023           | -                                     |
-| [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)                                                                                                         | ICLR 2023            | -                                     |
-| [Learning Performance-Improving Code Edits](http://arxiv.org/abs/2302.07867)                                                                                                                                        | ICLR 2024            | https://pie4perf.com/                 |
-| [WizardCoder: Empowering Code Large Language Models with Evol-Instruct](http://arxiv.org/abs/2306.08568)                                                                                                            | ICLR 2024            | https://github.com/nlpxucan/WizardLM  |
-| [Magicoder: Source Code Is All You Need](http://arxiv.org/abs/2312.02120)                                                                                                                                           | ICML 2024            | https://github.com/ise-uiuc/magicoder |
-
-### Medical
-
-| Paper                                                                                                                                             | Published in  | Code/Project                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- |:-------------:|:---------------------------------------------------:|
-| [MedDialog: Large-scale Medical Dialogue Datasets](https://aclanthology.org/2020.emnlp-main.743/)                                                 | EMNLP 2020    | https://github.com/UCSDAI4H/Medical-Dialogue-System |
-| [HuatuoGPT, towards Taming Language Model to Be a Doctor](https://arxiv.org/abs/2305.15075)                                                       | EMNLP 2023    | https://github.com/FreedomIntelligence/HuatuoGPT    |
-| [HuatuoGPT-II, One-stage Training for Medical Adaption of LLMs](https://arxiv.org/abs/2311.09774)                                                 | arxiv 2023    | https://github.com/FreedomIntelligence/HuatuoGPT-II |
-| [ChatCounselor: A Large Language Models for Mental Health Support](https://arxiv.org/abs/2309.15461)                                              | arxiv 2023    | -                                                   |
-| [DISC-MedLLM: Bridging General Large Language Models and Real-World Medical Consultation](https://arxiv.org/abs/2308.14346)                       | arxiv 2023    | https://github.com/FudanDISC/DISC-MedLLM            |
-| [Biomedical discovery through the integrative biomedical knowledge hub (iBKH)](https://www.cell.com/iscience/fulltext/S2589-0042(23)00537-0)      | iScience 2023 | https://github.com/wcm-wanglab/iBKH                 |
-| [Knowledge-Infused Prompting: Assessing and Advancing Clinical Text Data Generation with Large Language Models](https://arxiv.org/abs/2311.00287) | arxiv 2023    | https://github.com/ritaranx/ClinGen                 |
-| [ShenNong-TCM](https://github.com/michael-wzhu/ShenNong-TCM-LLM)                                                                                  | Github repo   | https://github.com/michael-wzhu/ShenNong-TCM-LLM    |
-| [ZhongJing(仲景)](https://github.com/pariskang/CMLM-ZhongJing)                                                                                      | Github repo   | https://github.com/pariskang/CMLM-ZhongJing         |
-
-### Law
-
-| Paper                                                                                                            | Published in | Code/Project                                     |
-| ---------------------------------------------------------------------------------------------------------------- |:------------:|:------------------------------------------------:|
-| [DISC-LawLLM: Fine-tuning Large Language Models for Intelligent Legal Services](http://arxiv.org/abs/2309.11325) | arxiv 2023   | https://github.com/FudanDISC/DISC-LawLLM         |
-| [Lawyer LLaMA Technical Report](http://arxiv.org/abs/2305.15062)                                                 | arxiv 2023   | -                                                |
-| [LawGPT: A Chinese Legal Knowledge-Enhanced Large Language Model](http://arxiv.org/abs/2406.04614)               | arxiv 2024   | https://github.com/pengxiao-song/LaWGPT          |
-| [WisdomInterrogatory](https://github.com/zhihaiLLM/wisdomInterrogatory)                                          | Github repo  | https://github.com/zhihaiLLM/wisdomInterrogatory |
-
-### Education
-
-| Paper                                                                                                                                  | Published in                                                        | Code/Project |
-| -------------------------------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------:|:------------:|
-| [A Comparative Study of AI-Generated (GPT-4) and Human-crafted MCQs in Programming Education](https://doi.org/10.1145/3636243.3636256) | Proceedings of the 26th Australasian Computing Education Conference | -            |
-
-### Financial
-
-| Paper                                                                                                          | Published in | Code/Project                      |
-| -------------------------------------------------------------------------------------------------------------- |:------------:|:---------------------------------:|
-| [FinTral: A Family of GPT-4 Level Multimodal Financial Large Language Models](http://arxiv.org/abs/2402.10986) | Arxiv 2024   | http://arxiv.org/abs/2402.10986   |
-| [FinGLM Competition](https://github.com/MetaGLM/FinGLM)                                                        | Github repo  | https://github.com/MetaGLM/FinGLM |
-
-## Agent
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-# Functionality
-
-## Understanding
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Logic
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Memory
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Generation
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-# Challenges and Limitations
-
-## Synthesizing and Augmenting Method
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Data Quality
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Impact of Data Synthesis and Augmentation
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-## Impact on Different Applications and Tasks
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
-
-# Future Directions
-
-| Paper | Published in | Code/Project |
-| ----- |:------------:|:------------:|
