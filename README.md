@@ -152,3 +152,20 @@
 | [CoAnnotating: Uncertainty-Guided Work Allocation between Human and Large Language Models for Data Annotation](https://arxiv.org/abs/2310.15638)                     | arXiv 2023     | https://github.com/SALT-NLP/CoAnnotating               |
 | [Closing the Loop: Testing ChatGPT to Generate Model Explanations to Improve Human Labelling of Sponsored Content on Social Media](https://arxiv.org/abs/2306.05115) | Springer, Cham | -                                                      |
 | [ToolCoder: Teach Code Generation Models to use API search tools](https://arxiv.org/abs/2305.04032)                                                                  | arXiv 2023     | -                                                      |
+### Data preference Alignment
+| Paper                                                                                                                      | Published in | Code/Project                                                  |
+| -------------------------------------------------------------------------------------------------------------------------- |:------------:|:-------------------------------------------------------------:|
+| [UltraFeedback: Boosting Language Models with Scaled AI Feedback](https://arxiv.org/abs/2310.01377)                        | arXiv 2023   | -                                                             |
+| [HelpSteer: Multi-attribute Helpfulness Dataset for SteerLM](https://arxiv.org/abs/2311.09528)                             | arXiv 2023   | https://huggingface.co/datasets/nvidia/HelpSteer              |
+| [Learning From Mistakes Makes LLM Better Reasoner](https://arxiv.org/abs/2310.20689)                                       | arXiv 2023   | https://github.com/microsoft/LEMA                             |
+| [Bot-Adversarial Dialogue for Safe Conversational Agents](https://aclanthology.org/2021.naacl-main.235/)                   | ACL 2021     | https://parl.ai/projects/safety_recipes/                      |
+| [BeaverTails: Towards Improved Safety Alignment of LLM via a Human-Preference Dataset](https://arxiv.org/abs/2307.04657)   | NIPS 2024    | https://sites.google.com/view/pku-beavertails                 |
+| [Let's Verify Step by Step](https://arxiv.org/abs/2305.20050)                                                              | arXiv 2023   | -                                                             |
+| [WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332)                        | arXiv 2021   | https://www.microsoft.com/en-us/bing/apis/bing-web-search-api |
+| [Direct Language Model Alignment from Online AI Feedback](https://arxiv.org/abs/2402.04792)                                | arXiv 2024   | -                                                             |
+| [Self-Judge: Selective Instruction Following with Alignment Self-Evaluation](https://arxiv.org/abs/2409.00935)             | arXiv 2024   | https://github.com/nusnlp/Self-J                              |
+| [SALMON: Self-Alignment with Instructable Reward Models](https://iclr.cc/virtual/2024/poster/17454)                        | ICLR 2024    | https://github.com/IBM/SALMON                                 |
+| [SteerLM: Attribute Conditioned SFT as an (User-Steerable) Alternative to RLHF](https://arxiv.org/abs/2310.05344)          | arXiv 2023   | https://huggingface.co/nvidia/SteerLM-llama2-13B              |
+| [Starling-7B: Increasing LLM Helpfulness & Harmlessness with RLAIF](https://openreview.net/forum?id=GqDntYTTbk#discussion) | COLM 2024    | https://starling.cs.berkeley.edu/                             |
+| [Advancing LLM Reasoning Generalists with Preference Trees](https://arxiv.org/abs/2404.02078)                              | arXiv 2024   | https://github.com/OpenBMB/Eurus                              |
+| [CriticBench: Benchmarking LLMs for Critique-Correct Reasoning](https://arxiv.org/abs/2402.14809)                          | arXiv 2024   | https://criticbench.github.io/                                |
